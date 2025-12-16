@@ -1,9 +1,9 @@
 # ✈️ Full Stack Flight Booking System
 
 A **Full Stack Flight Booking System** built using **React.js** on the frontend and **Spring Boot Microservices** on the backend.  
-The system allows users to search flights, view available options, select a flight, and complete the booking with payment integration.
+The system allows users to search flights, view available options, select a flight, and complete the booking with payment.
 
-This project follows **microservices architecture** with centralized configuration, service discovery, and API Gateway for scalability and maintainability.
+This project follows **Microservices Architecture** with **API Gateway**, **Service Discovery**, **Centralized Configuration**, and **Fault Tolerance using Resilience4j Circuit Breaker**.
 
 ---
 
@@ -11,13 +11,11 @@ This project follows **microservices architecture** with centralized configurati
 
 This application simulates a real-world **flight booking platform** where users can:
 
-- Search for flights using a dynamic form
+- Search flights using a user-friendly form
 - View a list of available flights
-- Select a flight
-- Proceed with booking and payment
-- Store and manage data using a relational database
-
-The backend is built using **Spring Boot Microservices**, communicating via **Feign Clients**, routed through an **API Gateway**, and registered with **Service Discovery**.
+- Select a flight and book tickets
+- Proceed with payment
+- Experience high availability with **Circuit Breaker & Fallback Mechanism**
 
 ---
 
@@ -25,57 +23,54 @@ The backend is built using **Spring Boot Microservices**, communicating via **Fe
 
 ### 🖥️ Frontend
 - React.js
-- Axios (HTTP client)
-- Bootstrap (UI styling)
+- Axios
+- Bootstrap
 - HTML5 / CSS3
-- Form handling and validation
 
 ### ⚙️ Backend (Microservices)
 - Spring Boot
 - Spring Cloud
-- Spring Data JPA (CRUD operations)
-- Spring Security (Basic security – optional)
-- RESTful APIs
-
-### 🧩 Microservices Components
-- API Gateway
-- Config Server (Centralized configuration)
-- Service Discovery (Eureka Server)
-- Feign Client (Inter-service communication)
+- Spring Data JPA
+- Spring Cloud OpenFeign
+- Spring Cloud Gateway
+- Spring Cloud Config Server
+- Eureka Service Discovery
+- **Resilience4j Circuit Breaker**
+- REST APIs
 
 ### 🗄️ Database
 - MySQL
 
 ### 🧪 Testing & Tools
-- Postman (API testing)
-- Logging using Appender Console & File Appender
-- Maven (Dependency management)
+- Postman
+- Maven
+- Logging (Console Appender & File Appender)
 
 ---
 
 ## ✨ Features
 
-- Flight search using user input (source, destination, date)
-- Display available flights dynamically
-- Flight selection and booking
-- Payment simulation
-- CRUD operations for flight data
-- Centralized API routing via Gateway
-- Load balancing using Service Discovery
-- Centralized configuration management
-- Exception handling and logging
-- Scalable microservices architecture
+- Flight search & booking
+- Payment processing
+- CRUD operations using Spring Data JPA
+- API Gateway as a single entry point
+- Service discovery with Eureka
+- Inter-service communication using Feign Client
+- Centralized configuration using Config Server
+- **Fault tolerance with Resilience4j Circuit Breaker**
+- **Fallback responses when service is unavailable**
+- Logging and exception handling
 
 ---
 
 ## 🧱 Microservices Architecture
 
-- **API Gateway** – Single entry point for all client requests
-- **Config Server** – Centralized configuration for all services
-- **Service Discovery (Eureka)** – Registers and discovers services
-- **Flight Service** – Manages flight-related operations
-- **Booking Service** – Handles booking logic
-- **Payment Service** – Processes payments
+- API Gateway
+- Config Server
+- Eureka Server (Service Discovery)
+- Flight Service
+- Booking Service
+- Payment Service
 
 ---
 
@@ -85,22 +80,22 @@ The backend is built using **Spring Boot Microservices**, communicating via **Fe
 Client (React UI)
         |
         ↓
-API Gateway (Single Entry Point)
+API Gateway
         |
         ↓
-Service Discovery (Eureka Server)
+Service Discovery (Eureka)
         |
         ↓
-Feign Client (Inter-service communication)
+Feign Client
         |
         ↓
-Controller Layer
+Controller
         |
         ↓
 Service Layer
         |
         ↓
-Repository Layer (Spring Data JPA)
+Repository (Spring Data JPA)
         |
         ↓
 MySQL Database
