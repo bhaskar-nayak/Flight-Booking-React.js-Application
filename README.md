@@ -99,15 +99,17 @@ Repository (Spring Data JPA)
         |
         ↓
 MySQL Database
+
+```
+--- 
+
 ## 🖼️ Application Screens
 
 ### 🔍 Search Flights
-![Search Flights](https://images.unsplash.com/photo-1436491865332-7a61a109cc05)
+![Search Flights](https://github.com/bhaskar-nayak/Flight-Booking-React.js-Application/blob/main/Screenshot%20(7).png)
 
 ### ✈️ Available Flights
-![Available Flights](https://images.unsplash.com/photo-1569154941061-e231b4725ef1)
+![Available Flights](https://github.com/bhaskar-nayak/Flight-Booking-React.js-Application/blob/main/Screenshot%20(6).png)
 
 ### 🛒 Booking Cart
-![Booking Cart](https://images.unsplash.com/photo-1542296332-2e4473faf563)
-
-### 💳 Payment
+![Booking Cart](https://github.com/bhaskar-nayak/Flight-Booking-React.js-Application/blob/main/Screenshot%20(5).png)
