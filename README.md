@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# ✈️ Full Stack Flight Booking System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **Full Stack Flight Booking System** built using **React.js** on the frontend and **Spring Boot Microservices** on the backend.  
+The system allows users to search flights, view available options, select a flight, and complete the booking with payment integration.
 
-## Available Scripts
+This project follows **microservices architecture** with centralized configuration, service discovery, and API Gateway for scalability and maintainability.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Project Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This application simulates a real-world **flight booking platform** where users can:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Search for flights using a dynamic form
+- View a list of available flights
+- Select a flight
+- Proceed with booking and payment
+- Store and manage data using a relational database
 
-### `npm test`
+The backend is built using **Spring Boot Microservices**, communicating via **Feign Clients**, routed through an **API Gateway**, and registered with **Service Discovery**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🖥️ Frontend
+- React.js
+- Axios (HTTP client)
+- Bootstrap (UI styling)
+- HTML5 / CSS3
+- Form handling and validation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ⚙️ Backend (Microservices)
+- Spring Boot
+- Spring Cloud
+- Spring Data JPA (CRUD operations)
+- Spring Security (Basic security – optional)
+- RESTful APIs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🧩 Microservices Components
+- API Gateway
+- Config Server (Centralized configuration)
+- Service Discovery (Eureka Server)
+- Feign Client (Inter-service communication)
 
-### `npm run eject`
+### 🗄️ Database
+- MySQL
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🧪 Testing & Tools
+- Postman (API testing)
+- Logging using Appender Console & File Appender
+- Maven (Dependency management)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ✨ Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Flight search using user input (source, destination, date)
+- Display available flights dynamically
+- Flight selection and booking
+- Payment simulation
+- CRUD operations for flight data
+- Centralized API routing via Gateway
+- Load balancing using Service Discovery
+- Centralized configuration management
+- Exception handling and logging
+- Scalable microservices architecture
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧱 Microservices Architecture
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **API Gateway** – Single entry point for all client requests
+- **Config Server** – Centralized configuration for all services
+- **Service Discovery (Eureka)** – Registers and discovers services
+- **Flight Service** – Manages flight-related operations
+- **Booking Service** – Handles booking logic
+- **Payment Service** – Processes payments
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔄 Application Flow (End-to-End)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+Client (React UI)
+        |
+        ↓
+API Gateway (Single Entry Point)
+        |
+        ↓
+Service Discovery (Eureka Server)
+        |
+        ↓
+Feign Client (Inter-service communication)
+        |
+        ↓
+Controller Layer
+        |
+        ↓
+Service Layer
+        |
+        ↓
+Repository Layer (Spring Data JPA)
+        |
+        ↓
+MySQL Database
