@@ -1,0 +1,23 @@
+.flight-form {
+  background-color: #ffffff;
+  max-width: 87%;
+  margin: 0 auto;
+}
+
+.input-custom {
+    height: 3.5rem;
+  border-radius: 0.375rem;
+  transition: border-color 0.3s;
+}
+
+.input-custom:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(20, 51, 98, 0.25);
+}
+
+.travelers-dropdown {
+  font-size: 0.9rem;
+}
+.btnhight{
+    height: 3.5rem;
+}

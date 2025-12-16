@@ -1,0 +1,42 @@
+.whyBook {
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+
+.whyBookWithObject {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 1rem;
+}
+
+.whyCard {
+    flex: 1 1 calc(100% - 2rem);
+    max-width: 300px;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.imageIcons {
+    width: 6rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Layout */
+@media (min-width: 576px) {
+    .whyCard {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media (min-width: 992px) {
+    .whyCard {
+        flex: 1 1 calc(20% - 2rem);
+    }
+}

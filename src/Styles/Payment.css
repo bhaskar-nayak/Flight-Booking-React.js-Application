@@ -1,0 +1,10 @@
+.payment{
+    color: rgb(243, 255, 255);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: rgb(75, 194, 142);
+    height: 5rem;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+}
